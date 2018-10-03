@@ -1,23 +1,10 @@
 var onboardingQuestions = [
   {
-      question: "What franchise would you rather play a game from?",
-      answers: [
-          {
-              type: "Microsoft",
-              content: "Halo"
-          },
-          {
-              type: "Nintendo",
-              content: "Pokemon"
-          },
-          {
-              type: "Sony",
-              content: "Uncharted"
-          }
-      ]
+      question: "My name is ",
+      answers: []
   },
   {
-      question: "Which console would you prefer to play with friends?",
+      question: "and my pup's name is ",
       answers: [
           {
               type: "Microsoft",
