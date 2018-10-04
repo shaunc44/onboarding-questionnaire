@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import random
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,12 +21,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'g@++bxf5&lz@mz)m^4d5g9@l7fgb#dq*%ciyqh^=^%8l8t!pm1'
+# SECRET_KEY = 'g@++bxf5&lz@mz)m^4d5g9@l7fgb#dq*%ciyqh^=^%8l8t!pm1'
+SECRET_KEY = ''.join([random.SystemRandom() \
+    .choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') \
+    for i in range(50)])
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'onboarding-questionnaire.herokuapp.com', 
+    '127.0.0.1:8000'
+]
 
 
 # Application definition
@@ -125,7 +132,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static'),
 ]
