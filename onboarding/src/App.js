@@ -47,27 +47,27 @@ class App extends Component {
 
         <div class="onboarding-form-fields">
           <form>
-            <label>My name is </label>
+            <label class="onboarding-form-label">My name is </label>
             <input type="text" name="ownerName" onChange={this.handleChange} />
           </form>
 
           <form>
-            <label>and my pup's name is </label>
+            <label class="onboarding-form-label">and my pup's name is </label>
             <input type="text" name="petName" onChange={this.handleChange} />
           </form>
 
           <form>
-            <label>My zip code is </label>
+            <label class="onboarding-form-label">My zip code is </label>
             <input type="number" name="zipCode" onChange={this.handleChange} />
           </form>
 
           <form>
-            <label>My email is </label>
+            <label class="onboarding-form-label">My email is </label>
             <input type="email" name="email" onChange={this.handleChange} />
           </form>
 
           <form>
-            <label>{this.state.petName} is a </label>
+            <label class="onboarding-form-label">{this.state.petName} is a </label>
             <Autocomplete 
               value={this.state.value}
               name="mix"
@@ -81,7 +81,7 @@ class App extends Component {
           </form>
 
           <form>
-            <label>of a </label>
+            <label class="onboarding-form-label">of a </label>
             <select value={this.state.value} name="breed" onChange={this.handleChange}>
               <option value="lab">labrador retriever</option>
               <option value="poodle">poodle</option>
@@ -89,16 +89,16 @@ class App extends Component {
               <option value="chihuahua">chihuahua</option>
               <option value="dachshund">dachshund</option>
             </select>
-            <label> to be precise.</label>
+            <label class="onboarding-form-label"> to be precise.</label>
           </form>
 
           <form>
-            <label>{this.state.petName} is a </label>
+            <label class="onboarding-form-label">{this.state.petName} is a </label>
             <select value={this.state.value} name="sex" onChange={this.handleChange}>
               <option value="he">He</option>
               <option value="she">She</option>
             </select>
-            <label> and is </label>
+            <label class="onboarding-form-label"> and is </label>
             <select value={this.state.value} name="neuterSpay" onChange={this.handleChange}>
               <option value="neutered/spayed">neutered/spayed</option>
               <option value="not neutered/spayed">not neutered/spayed</option>
@@ -106,7 +106,7 @@ class App extends Component {
           </form>
 
           <form>
-            <label>{this.state.petName} was born in </label>
+            <label class="onboarding-form-label">{this.state.petName} was born in </label>
             <select value={this.state.value} name="month" onChange={this.handleChange}>
               <option value="Jan">Jan</option>
               <option value="Feb">Feb</option>
@@ -121,7 +121,7 @@ class App extends Component {
               <option value="Nov">Nov</option>
               <option value="Dec">Dec</option>
             </select>
-            <label>, </label>
+            <label class="onboarding-form-label">, </label>
             <select value={this.state.value} name="year" onChange={this.handleChange}>
               <option value="2018">2018</option>
               <option value="2017">2017</option>
