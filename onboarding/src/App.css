@@ -1,3 +1,7 @@
+body {
+  /*font-family: WalsheimRegular,Helvetica Neue,sans-serif;*/
+}
+
 .App {
   text-align: center;
 }
@@ -44,6 +48,10 @@
   /*line-height: 18px;*/
 }
 
+.onboarding-form-block {
+  padding: 8px 5px;
+}
+
 .onboarding-form-fields {
   margin-left: 36%;
   text-align: left;
@@ -54,6 +62,20 @@
   color: #ffc2c2;
   font-size: 21px;
   line-height: 32px;
+}
+
+.onboarding-form-block > input {
+    /*height: 44px;*/
+    /*padding: 26px 12px;*/
+    font-size: 14px;
+    line-height: 31px;
+    color: #ff5543;
+    border: none;
+    border-bottom: 1px dashed #ff918e;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 auto;
+    font-size: 24px;
 }
 
 /*@keyframes App-logo-spin {
@@ -93,8 +115,8 @@ input {
 
 .suggestion-active,
 .suggestions li:hover {
-  background-color: #008f68;
-  color: #fae042;
+  background-color: white;
+  color: #ff5543;
   cursor: pointer;
   font-weight: 700;
 }
